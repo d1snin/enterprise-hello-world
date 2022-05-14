@@ -24,5 +24,8 @@ The following environment variables are supported:
 | `HELLOWORLD_USERNAME` | Username to use for Basic auth. | `admin` |
 | `HELLOWORLD_PASSWORD` | Password to use for Basic auth. | `admin` |
 
+### Heartbeat
+Heartbeat is located at `/ping`
+
 ### Why?
 I made this to get more familiar with Go and for fun.
