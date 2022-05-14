@@ -23,3 +23,6 @@ The following environment variables are supported:
 | `HELLOWORLD_MESSAGERECEIVER` | Whatever to use in the hello world message according to the following pattern: `Hello, {messagereceiver}!` | `World` |
 | `HELLOWORLD_USERNAME` | Username to use for Basic auth. | `admin` |
 | `HELLOWORLD_PASSWORD` | Password to use for Basic auth. | `admin` |
+
+### Why?
+I made this to get more familiar with Go and for fun.
