@@ -1,8 +1,8 @@
 package main
 
 import (
-	"enterprise-hello-world/bootstrap"
-	"enterprise-hello-world/config"
+	"enterprise-hello-world/internal/bootstrapper"
+	"enterprise-hello-world/internal/config"
 	"github.com/go-chi/chi/v5"
 	"log"
 	"net/http"
@@ -14,8 +14,10 @@ var (
 	l         = log.Default()
 )
 
+var data = []byte("the thing")
+
 func main() {
-	bootstrap.Setup(chiRouter, conf)
+	bootstrapper.Setup(chiRouter, conf)
 
 	if err := http.ListenAndServe(":"+conf.Port, chiRouter); err != nil {
 		l.Fatal(err)

@@ -1,16 +1,17 @@
-package bootstrap
+package bootstrapper
 
 import (
-	"enterprise-hello-world/config"
-	"enterprise-hello-world/middleware"
-	"enterprise-hello-world/routers"
-	"enterprise-hello-world/service"
+	"enterprise-hello-world/internal/config"
+	"enterprise-hello-world/internal/middleware"
+	"enterprise-hello-world/internal/router"
+	"enterprise-hello-world/internal/service"
 	"github.com/go-chi/chi/v5"
 	"log"
 )
 
 var l = log.Default()
 
+// Setup prints the provided configuration, configures the middleware and request routers.
 func Setup(chiRouter chi.Router, conf *config.Configuration) {
 	l.Printf(
 		"Listening on port %v; "+
@@ -25,7 +26,7 @@ func Setup(chiRouter chi.Router, conf *config.Configuration) {
 
 	middleware.InstallMiddleware(chiRouter, conf)
 
-	routers.NewHelloWorldRouter(
+	router.NewHelloWorldRouter(
 		chiRouter,
 		service.NewHelloMessageService(conf),
 	).Route()
