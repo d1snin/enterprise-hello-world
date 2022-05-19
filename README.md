@@ -3,7 +3,7 @@
 
 ### Building
 ```sh
-go build .
+go build ./cmd -o enterprise-hello-world
 ```
 
 ### Running
