@@ -12,7 +12,7 @@ go build ./cmd -o enterprise-hello-world
 ```
 or
 ```sh
-go run .
+go run ./cmd
 ```
 
 ### Configuration
