@@ -14,8 +14,6 @@ var (
 	l         = log.Default()
 )
 
-var data = []byte("the thing")
-
 func main() {
 	bootstrapper.Setup(chiRouter, conf)
 
